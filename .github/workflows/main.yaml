@@ -20,7 +20,7 @@ jobs:
         python-version: 3.x  # Specify the Python version as 3.x
 
     - name: Run the app  # # Execute the simple python application (app.py)
-      working-directory: MyProject
+      working-directory: Lab5/MyProject
       env:
         PORT: 5005 #Example of how to set the port to 5005 via an environment variable
       # Executed the command "python main.py" (example of single command in runner shell)
