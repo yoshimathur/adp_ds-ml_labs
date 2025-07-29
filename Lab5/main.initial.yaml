@@ -1,0 +1,28 @@
+name: Python App CI  # Name of the workflow
+
+on:
+  push:
+    branches: [main]  # Trigger the workflow on push events to the main branch
+  pull_request:
+    branches: [main]  # Trigger the workflow on pull request events targeting the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Specify the operating system for the job to run on
+
+    steps:
+    - name: Checkout repository  # Checkout the repository code
+      uses: actions/checkout@v2  # Use the actions/checkout action
+
+    - name: Set up Python  # Set up the Python environment
+      uses: actions/setup-python@v2  # Use the actions/setup-python action
+      with:
+        python-version: 3.x  # Specify the Python version as 3.x
+
+    - name: Run the app  # # Execute the simple python application (app.py)
+      working-directory: MyProject
+      env:
+        PORT: 5005 #Example of how to set the port to 5005 via an environment variable
+      # Executed the command "python main.py" (example of single command in runner shell)
+      run: |
+        python main.py
