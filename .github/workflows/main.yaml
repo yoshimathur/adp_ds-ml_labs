@@ -26,3 +26,7 @@ jobs:
       # Executed the command "python main.py" (example of single command in runner shell)
       run: |
         python main.py
+
+    - name: Status
+      run: echo "Job completed"
+      
