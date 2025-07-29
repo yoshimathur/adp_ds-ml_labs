@@ -1,0 +1,2 @@
+Flask
+pytest==7.3.2
