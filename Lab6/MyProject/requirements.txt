@@ -1,3 +1,4 @@
-Flask==2.3.2
+Flask
 # Add other dependencies as needed
 # Note if you use just Flask, with no version number you get latest.
+pytest==7.3.2
